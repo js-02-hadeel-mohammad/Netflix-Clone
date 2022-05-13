@@ -1,0 +1,14 @@
+#header{
+    text-align: center;
+}
+
+section{
+
+    display: flex;
+  flex-wrap: wrap; 
+  justify-content:center;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem;
+
+}
