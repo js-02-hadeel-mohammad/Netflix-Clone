@@ -21,12 +21,11 @@ export default function ModalMovie(props){
     async function handleAddFav(e, movie) {
         e.preventDefault();
         const dataToBeSent = {
-            id: movie.id,
             title: movie.title,
             release_date: movie.release_date,
             poster_path: movie.poster_path,
-            overview: movie.overview
-      
+            overview: movie.overview,
+            comment: movie.comment
         }
 
         let serverURL="https://movie-prep-js.herokuapp.com";
@@ -51,6 +50,9 @@ export default function ModalMovie(props){
         </Modal.Header>
         <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500/${props.chosenMovie.poster_path}`} />
         <Modal.Body>
+          {props.chosenMovie.overview}
+          <br></br>
+          {props.chosenMovie.comment? props.chosenMovie.comment:"No comment is added"}
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Comments</Form.Label>
@@ -63,7 +65,8 @@ export default function ModalMovie(props){
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={props.handleClose}>Close</Button>
-          <Button variant="primary" onClick={(e)=>{handleAddFav(e,props.chosenMovie)}}>Add to Favorites</Button>
+          <Button variant="primary" onClick={(e)=>{handleAddFav(e,props.chosenMovie);
+         props.handleClose()}}>Add to Favorites</Button>
         </Modal.Footer>
       </Modal></>
     )
