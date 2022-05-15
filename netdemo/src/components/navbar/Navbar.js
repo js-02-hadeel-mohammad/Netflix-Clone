@@ -11,7 +11,7 @@ export default function Navbarjs(props){
     <Navbar.Brand href="/">Movies</Navbar.Brand>
     <Nav className="me-auto">
       <Nav.Link href="/">Home</Nav.Link>
-      <Nav.Link href="/favList">FavList</Nav.Link>
+      <Nav.Link href="/favList">Favorite List</Nav.Link>
     </Nav>
     </Container>
   </Navbar>

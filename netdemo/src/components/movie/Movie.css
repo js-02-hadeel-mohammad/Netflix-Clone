@@ -1,0 +1,9 @@
+.overview{
+    overflow: auto;
+    height: 40%;
+    text-align: left;
+}
+
+.cardBody{
+    height: 18rem;
+}

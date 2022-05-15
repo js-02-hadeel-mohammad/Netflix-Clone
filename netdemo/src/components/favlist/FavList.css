@@ -1,0 +1,36 @@
+section{
+
+    display: flex;
+  flex-wrap: wrap; 
+  justify-content:center;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem;
+
+}
+.overview{
+    overflow: auto;
+    height: 40%;
+    text-align: left;
+}
+
+.cardBody{
+    height: 18rem;
+    padding: 4rem;
+}
+
+.myForm{
+    padding: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#deleteBut{
+    margin: 0.25rem;
+}
+
+/*.updateYourComment{
+    margin: 0.5rem;
+}*/

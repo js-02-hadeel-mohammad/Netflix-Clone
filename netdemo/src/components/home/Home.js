@@ -16,13 +16,14 @@ export default function Home(props){
 
     function updateMovies(newmovie, id) {
         let updateMovie = movies.map(movie => {
-            if (movie.id == id) {
+            if (movie.id === id) {
                 movie.comment = newmovie.comment;
                 return movie;
             } else {
                 return movie;
             }
         })
+        console.log("Update Movie:");
         console.log(updateMovie);
         setMovies(updateMovie);
     }
@@ -37,8 +38,7 @@ export default function Home(props){
         <br></br>
         <section>
         {
-            (movies.length>0 )&& <MovieList movies={movies} updateMovies={updateMovies} />
-            
+            (movies.length>0 )&& <MovieList movies={movies} updateMovies={updateMovies} />    
         }
         </section>
         
